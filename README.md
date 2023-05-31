@@ -18,3 +18,12 @@ Java, Swift, Go, Javascript, Python
   - [amino](https://github.com/cosmostation/proto_convert/tree/main/proto/amino)
   - [cosmos](https://github.com/cosmostation/proto_convert/tree/main/proto/cosmos)
   - [tendermint](https://github.com/cosmostation/proto_convert/tree/main/proto/tendermint)
+
+
+ #### [Iris](https://github.com/irisnet/irishub/tree/master/proto)
+  - [irishub](https://github.com/cosmostation/proto_convert/tree/main/proto/irishub)
+  - [irismod](https://github.com/cosmostation/proto_convert/tree/main/proto/irismod)
+
+
+ #### [Osmosis](https://github.com/osmosis-labs/osmosis/tree/main/proto)
+  - [osmosis](https://github.com/cosmostation/proto_convert/tree/main/proto/osmosis)
