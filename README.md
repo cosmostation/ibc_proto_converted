@@ -28,6 +28,10 @@ Java, Swift, Go, Javascript, Python
  #### AssetMantle
   - [asssetmantle Schema](https://github.com/AssetMantle/schema/tree/master/proto)
   - [asssetmantle Modules](https://github.com/AssetMantle/modules/tree/master/proto)
+
+
+ #### [Axelar](https://github.com/axelarnetwork/axelar-core/tree/main/proto)
+
  
 
  #### [Osmosis](https://github.com/osmosis-labs/osmosis/tree/main/proto)
