@@ -14,7 +14,7 @@ Java, Swift, Go, Javascript, Python
 
 
 ## Description of Modules
- #### 🪐[Cosmos-sdk](https://github.com/cosmos/cosmos-sdk/tree/main/proto)
+ #### 🪐[Cosmos-sdk](https://github.com/cosmos/cosmos-sdk/tree/main/proto) [ics23](https://github.com/cosmos/ics23/blob/master/proto/cosmos/ics23/v1/proofs.proto)
 
 
  #### 🪐Iris [hub](https://github.com/irisnet/irishub/tree/master/proto)  [mod](https://github.com/irisnet/irismod/tree/main/proto)
