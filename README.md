@@ -35,6 +35,12 @@ Java, Swift, Go, Javascript, Python
 
  #### [Crescent](https://github.com/crescent-network/crescent/tree/main/proto)
 
+
+ #### Evmos
+  - [ethermint](https://github.com/evmos/evmos/tree/main/proto/ethermint)
+  - [evmos](https://github.com/evmos/evmos/tree/main/proto/evmos)
+
+
  
 
  #### [Osmosis](https://github.com/osmosis-labs/osmosis/tree/main/proto)
