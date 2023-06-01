@@ -17,7 +17,7 @@ Java, Swift, Go, Javascript, Python
  #### [Cosmos-sdk](https://github.com/cosmos/cosmos-sdk/tree/main/proto)
 
 
- #### [Iris]
+ #### Iris
   - [irishub](https://github.com/irisnet/irishub/tree/master/proto)
   - [irismod](https://github.com/irisnet/irismod/tree/main/proto)
 
@@ -25,10 +25,9 @@ Java, Swift, Go, Javascript, Python
  #### [Akash](https://github.com/akash-network/akash-api/tree/main/proto)
 
 
- #### [AssetMantle Schema]
-  - [asssetmantleSchema](https://github.com/AssetMantle/schema/tree/master/proto)
-  - [asssetmantleModules](https://github.com/AssetMantle/modules/tree/master/proto)
+ #### AssetMantle
+  - [asssetmantle Schema](https://github.com/AssetMantle/schema/tree/master/proto)
+  - [asssetmantle Modules](https://github.com/AssetMantle/modules/tree/master/proto)
  
 
- #### [Osmosis]
-  - [osmosis](https://github.com/osmosis-labs/osmosis/tree/main/proto)
+ #### [Osmosis](https://github.com/osmosis-labs/osmosis/tree/main/proto)
