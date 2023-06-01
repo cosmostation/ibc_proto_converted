@@ -14,32 +14,32 @@ Java, Swift, Go, Javascript, Python
 
 
 ## Description of Modules
- #### #[Cosmos-sdk](https://github.com/cosmos/cosmos-sdk/tree/main/proto)
+ #### 🪐[Cosmos-sdk](https://github.com/cosmos/cosmos-sdk/tree/main/proto)
 
 
- #### #Iris [hub](https://github.com/irisnet/irishub/tree/master/proto)  [mod](https://github.com/irisnet/irismod/tree/main/proto)
+ #### 🪐Iris [hub](https://github.com/irisnet/irishub/tree/master/proto)  [mod](https://github.com/irisnet/irismod/tree/main/proto)
 
 
- #### #[Akash](https://github.com/akash-network/akash-api/tree/main/proto)
+ #### 🪐[Akash](https://github.com/akash-network/akash-api/tree/main/proto)
 
 
- #### #AssetMantle [schema](https://github.com/AssetMantle/schema/tree/master/proto)  [modules](https://github.com/AssetMantle/modules/tree/master/proto)
+ #### 🪐AssetMantle [schema](https://github.com/AssetMantle/schema/tree/master/proto)  [modules](https://github.com/AssetMantle/modules/tree/master/proto)
 
 
- #### #[Axelar](https://github.com/axelarnetwork/axelar-core/tree/main/proto)
+ #### 🪐[Axelar](https://github.com/axelarnetwork/axelar-core/tree/main/proto)
 
 
- #### #[BandProtocol](https://github.com/bandprotocol/chain/tree/master/proto)
+ #### 🪐[BandProtocol](https://github.com/bandprotocol/chain/tree/master/proto)
 
 
- #### #[Crescent](https://github.com/crescent-network/crescent/tree/main/proto)
+ #### 🪐[Crescent](https://github.com/crescent-network/crescent/tree/main/proto)
 
 
- #### #Evmos [ethermint](https://github.com/evmos/evmos/tree/main/proto/ethermint)  [evmos](https://github.com/evmos/evmos/tree/main/proto/evmos)
+ #### 🪐Evmos [ethermint](https://github.com/evmos/evmos/tree/main/proto/ethermint)  [evmos](https://github.com/evmos/evmos/tree/main/proto/evmos)
 
 
- #### #[Osmosis](https://github.com/osmosis-labs/osmosis/tree/main/proto)
+ #### 🪐[Osmosis](https://github.com/osmosis-labs/osmosis/tree/main/proto)
 
 
 
- #### #[CosmWasm](https://github.com/CosmWasm/wasmd/tree/main/proto)
+ #### 🪐[CosmWasm](https://github.com/CosmWasm/wasmd/tree/main/proto)
