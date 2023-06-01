@@ -1,0 +1,8 @@
+syntax = "proto3";
+package assetmantle.modules.identities.transactions.nub;
+
+import "assetmantle/ids/base/identity_id.proto";
+
+message TransactionResponse {
+  assetmantle.schema.ids.base.IdentityID nub_i_d = 1;
+}

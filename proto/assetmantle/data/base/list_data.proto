@@ -1,0 +1,11 @@
+syntax = "proto3";
+package assetmantle.schema.data.base;
+
+import "assetmantle/data/base/any_listable_data.proto";
+import "gogoproto/gogo.proto";
+
+message ListData {
+  option (gogoproto.goproto_getters) = false;
+
+  repeated AnyListableData any_listable_data = 1;
+}

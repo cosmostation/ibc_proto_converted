@@ -15,15 +15,20 @@ Java, Swift, Go, Javascript, Python
 
 ## Description of Modules
  #### [Cosmos-sdk](https://github.com/cosmos/cosmos-sdk/tree/main/proto)
-  - [amino](https://github.com/cosmostation/proto_convert/tree/main/proto/amino)
-  - [cosmos](https://github.com/cosmostation/proto_convert/tree/main/proto/cosmos)
-  - [tendermint](https://github.com/cosmostation/proto_convert/tree/main/proto/tendermint)
 
 
- #### [Iris](https://github.com/irisnet/irishub/tree/master/proto)
-  - [irishub](https://github.com/cosmostation/proto_convert/tree/main/proto/irishub)
-  - [irismod](https://github.com/cosmostation/proto_convert/tree/main/proto/irismod)
+ #### [Iris]
+  - [irishub](https://github.com/irisnet/irishub/tree/master/proto)
+  - [irismod](https://github.com/irisnet/irismod/tree/main/proto)
 
 
- #### [Osmosis](https://github.com/osmosis-labs/osmosis/tree/main/proto)
-  - [osmosis](https://github.com/cosmostation/proto_convert/tree/main/proto/osmosis)
+ #### [Akash](https://github.com/akash-network/akash-api/tree/main/proto)
+
+
+ #### [AssetMantle Schema]
+  - [asssetmantleSchema](https://github.com/AssetMantle/schema/tree/master/proto)
+  - [asssetmantleModules](https://github.com/AssetMantle/modules/tree/master/proto)
+ 
+
+ #### [Osmosis]
+  - [osmosis](https://github.com/osmosis-labs/osmosis/tree/main/proto)
