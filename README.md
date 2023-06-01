@@ -32,6 +32,9 @@ Java, Swift, Go, Javascript, Python
 
  #### [Axelar](https://github.com/axelarnetwork/axelar-core/tree/main/proto)
 
+
+ #### [Crescent](https://github.com/crescent-network/crescent/tree/main/proto)
+
  
 
  #### [Osmosis](https://github.com/osmosis-labs/osmosis/tree/main/proto)
