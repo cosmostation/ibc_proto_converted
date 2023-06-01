@@ -38,3 +38,7 @@ Java, Swift, Go, Javascript, Python
  
 
  #### [Osmosis](https://github.com/osmosis-labs/osmosis/tree/main/proto)
+
+
+
+ #### [CosmWasm](https://github.com/CosmWasm/wasmd/tree/main/proto)
