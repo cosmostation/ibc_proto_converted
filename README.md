@@ -41,5 +41,12 @@ Java, Swift, Go, Javascript, Python
  #### 🪐[Osmosis](https://github.com/osmosis-labs/osmosis/tree/main/proto)
 
 
+ #### 🪐[Tgrade](https://github.com/confio/tgrade/tree/main/proto)
 
- #### 🪐[CosmWasm](https://github.com/CosmWasm/wasmd/tree/main/proto)
+
+
+
+ #### 🪐[IBC](https://github.com/cosmos/ibc-go/tree/main/proto) (ibc, capability)
+
+
+ #### 🪐[CosmWasm](https://github.com/CosmWasm/wasmd/tree/main/proto) [confio](https://github.com/confio/tgrade/tree/main/third_party/proto/cosmwasm)

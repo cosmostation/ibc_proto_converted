@@ -5,7 +5,6 @@ import "gogoproto/gogo.proto";
 import "cosmwasm/wasm/v1/types.proto";
 import "google/api/annotations.proto";
 import "cosmos/base/query/v1beta1/pagination.proto";
-import "amino/amino.proto";
 
 option go_package = "github.com/CosmWasm/wasmd/x/wasm/types";
 option (gogoproto.goproto_getters_all) = false;
@@ -64,13 +63,6 @@ service Query {
   rpc Params(QueryParamsRequest) returns (QueryParamsResponse) {
     option (google.api.http).get = "/cosmwasm/wasm/v1/codes/params";
   }
-
-  // ContractsByCreator gets the contracts by creator
-  rpc ContractsByCreator(QueryContractsByCreatorRequest)
-      returns (QueryContractsByCreatorResponse) {
-    option (google.api.http).get =
-        "/cosmwasm/wasm/v1/contracts/creator/{creator_address}";
-  }
 }
 
 // QueryContractInfoRequest is the request type for the Query/ContractInfo RPC
@@ -89,7 +81,6 @@ message QueryContractInfoResponse {
   ContractInfo contract_info = 2 [
     (gogoproto.embed) = true,
     (gogoproto.nullable) = false,
-    (amino.dont_omitempty) = true,
     (gogoproto.jsontag) = ""
   ];
 }
@@ -107,7 +98,7 @@ message QueryContractHistoryRequest {
 // Query/ContractHistory RPC method
 message QueryContractHistoryResponse {
   repeated ContractCodeHistoryEntry entries = 1
-      [ (gogoproto.nullable) = false, (amino.dont_omitempty) = true ];
+      [ (gogoproto.nullable) = false ];
   // pagination defines the pagination in the response.
   cosmos.base.query.v1beta1.PageResponse pagination = 2;
 }
@@ -142,8 +133,7 @@ message QueryAllContractStateRequest {
 // QueryAllContractStateResponse is the response type for the
 // Query/AllContractState RPC method
 message QueryAllContractStateResponse {
-  repeated Model models = 1
-      [ (gogoproto.nullable) = false, (amino.dont_omitempty) = true ];
+  repeated Model models = 1 [ (gogoproto.nullable) = false ];
   // pagination defines the pagination in the response.
   cosmos.base.query.v1beta1.PageResponse pagination = 2;
 }
@@ -195,11 +185,10 @@ message CodeInfoResponse {
   string creator = 2;
   bytes data_hash = 3
       [ (gogoproto.casttype) =
-            "github.com/cometbft/cometbft/libs/bytes.HexBytes" ];
+            "github.com/tendermint/tendermint/libs/bytes.HexBytes" ];
   // Used in v1beta1
   reserved 4, 5;
-  AccessConfig instantiate_permission = 6
-      [ (gogoproto.nullable) = false, (amino.dont_omitempty) = true ];
+  AccessConfig instantiate_permission = 6 [ (gogoproto.nullable) = false ];
 }
 
 // QueryCodeResponse is the response type for the Query/Code RPC method
@@ -218,8 +207,7 @@ message QueryCodesRequest {
 
 // QueryCodesResponse is the response type for the Query/Codes RPC method
 message QueryCodesResponse {
-  repeated CodeInfoResponse code_infos = 1
-      [ (gogoproto.nullable) = false, (amino.dont_omitempty) = true ];
+  repeated CodeInfoResponse code_infos = 1 [ (gogoproto.nullable) = false ];
   // pagination defines the pagination in the response.
   cosmos.base.query.v1beta1.PageResponse pagination = 2;
 }
@@ -234,7 +222,8 @@ message QueryPinnedCodesRequest {
 // QueryPinnedCodesResponse is the response type for the
 // Query/PinnedCodes RPC method
 message QueryPinnedCodesResponse {
-  repeated uint64 code_ids = 1 [ (gogoproto.customname) = "CodeIDs" ];
+  repeated uint64 code_ids = 1
+      [ (gogoproto.nullable) = false, (gogoproto.customname) = "CodeIDs" ];
   // pagination defines the pagination in the response.
   cosmos.base.query.v1beta1.PageResponse pagination = 2;
 }
@@ -245,24 +234,5 @@ message QueryParamsRequest {}
 // QueryParamsResponse is the response type for the Query/Params RPC method.
 message QueryParamsResponse {
   // params defines the parameters of the module.
-  Params params = 1
-      [ (gogoproto.nullable) = false, (amino.dont_omitempty) = true ];
-}
-
-// QueryContractsByCreatorRequest is the request type for the
-// Query/ContractsByCreator RPC method.
-message QueryContractsByCreatorRequest {
-  // CreatorAddress is the address of contract creator
-  string creator_address = 1;
-  // Pagination defines an optional pagination for the request.
-  cosmos.base.query.v1beta1.PageRequest pagination = 2;
-}
-
-// QueryContractsByCreatorResponse is the response type for the
-// Query/ContractsByCreator RPC method.
-message QueryContractsByCreatorResponse {
-  // ContractAddresses result set
-  repeated string contract_addresses = 1;
-  // Pagination defines the pagination in the response.
-  cosmos.base.query.v1beta1.PageResponse pagination = 2;
+  Params params = 1 [ (gogoproto.nullable) = false ];
 }
