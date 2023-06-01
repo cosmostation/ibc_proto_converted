@@ -17,45 +17,56 @@ option go_package = "github.com/crescent-network/crescent/v5/x/farming/types";
 service Query {
   // Params returns parameters of the farming module.
   rpc Params(QueryParamsRequest) returns (QueryParamsResponse) {
+    option (google.api.http).get                                           = "/crescent/farming/v1beta1/params";
   }
 
   // Plans returns all plans.
   rpc Plans(QueryPlansRequest) returns (QueryPlansResponse) {
+    option (google.api.http).get                                           = "/crescent/farming/v1beta1/plans";
   }
 
   // Plan returns a specific plan.
   rpc Plan(QueryPlanRequest) returns (QueryPlanResponse) {
+    option (google.api.http).get = "/crescent/farming/v1beta1/plans/{plan_id}";
   }
 
   rpc Position(QueryPositionRequest) returns (QueryPositionResponse) {
+    option (google.api.http).get = "/crescent/farming/v1beta1/positions/{farmer}";
   }
 
   // Stakings returns all stakings by a farmer.
   rpc Stakings(QueryStakingsRequest) returns (QueryStakingsResponse) {
+    option (google.api.http).get = "/crescent/farming/v1beta1/stakings/{farmer}";
   }
 
   // QueryStakings returns all queued stakings by a farmer.
   rpc QueuedStakings(QueryQueuedStakingsRequest) returns (QueryQueuedStakingsResponse) {
+    option (google.api.http).get = "/crescent/farming/v1beta1/queued_stakings/{farmer}";
   }
 
   // TotalStakings returns total staking amount for a staking coin denom
   rpc TotalStakings(QueryTotalStakingsRequest) returns (QueryTotalStakingsResponse) {
+    option (google.api.http).get = "/crescent/farming/v1beta1/total_stakings/{staking_coin_denom}";
   }
 
   // Rewards returns rewards for a farmer
   rpc Rewards(QueryRewardsRequest) returns (QueryRewardsResponse) {
+    option (google.api.http).get = "/crescent/farming/v1beta1/rewards/{farmer}";
   }
 
   // UnharvestedRewards returns unharvested rewards for a farmer
   rpc UnharvestedRewards(QueryUnharvestedRewardsRequest) returns (QueryUnharvestedRewardsResponse) {
+    option (google.api.http).get = "/crescent/farming/v1beta1/unharvested_rewards/{farmer}";
   }
 
   // CurrentEpochDays returns current epoch days.
   rpc CurrentEpochDays(QueryCurrentEpochDaysRequest) returns (QueryCurrentEpochDaysResponse) {
+    option (google.api.http).get = "/crescent/farming/v1beta1/current_epoch_days";
   }
 
   // HistoricalRewards returns HistoricalRewards records for a staking coin denom.
   rpc HistoricalRewards(QueryHistoricalRewardsRequest) returns (QueryHistoricalRewardsResponse) {
+    option (google.api.http).get = "/crescent/farming/v1beta1/historical_rewards/{staking_coin_denom}";
   }
 }
 

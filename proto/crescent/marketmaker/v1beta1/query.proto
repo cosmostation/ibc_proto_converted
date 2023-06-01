@@ -17,14 +17,17 @@ option go_package = "github.com/crescent-network/crescent/v5/x/marketmaker/types
 service Query {
   // Params returns parameters of the marketmaker module.
   rpc Params(QueryParamsRequest) returns (QueryParamsResponse) {
+    option (google.api.http).get                                           = "/crescent/marketmaker/v1beta1/params";
   }
 
   // MarketMakers returns all market makers.
   rpc MarketMakers(QueryMarketMakersRequest) returns (QueryMarketMakersResponse) {
+    option (google.api.http).get = "/crescent/marketmaker/v1beta1/marketmakers";
   }
 
   // Incentive returns a specific incentive.
   rpc Incentive(QueryIncentiveRequest) returns (QueryIncentiveResponse) {
+    option (google.api.http).get = "/crescent/marketmaker/v1beta1/incentive/{address}";
   }
 }
 

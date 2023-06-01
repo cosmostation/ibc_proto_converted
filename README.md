@@ -33,6 +33,9 @@ Java, Swift, Go, Javascript, Python
  #### [Axelar](https://github.com/axelarnetwork/axelar-core/tree/main/proto)
 
 
+ #### [BandProtocol](https://github.com/bandprotocol/chain/tree/master/proto)
+
+
  #### [Crescent](https://github.com/crescent-network/crescent/tree/main/proto)
 
 
