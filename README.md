@@ -38,6 +38,9 @@ Java, Swift, Go, Javascript, Python
  #### 🪐[Crypto-org](https://github.com/crypto-org-chain/chain-main/tree/master/proto)
 
 
+ #### 🪐[Desmos](https://github.com/desmos-labs/desmos/tree/master/proto)
+
+
  #### 🪐Evmos [ethermint](https://github.com/evmos/evmos/tree/main/proto/ethermint)  [evmos](https://github.com/evmos/evmos/tree/main/proto/evmos)
 
 
