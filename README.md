@@ -50,6 +50,9 @@ Java, Swift, Go, Javascript, Python
  #### 🪐[Osmosis](https://github.com/osmosis-labs/osmosis/tree/main/proto)
 
 
+ #### 🪐[Persistence](https://github.com/persistenceOne/persistence-sdk/tree/master/proto)
+
+
  #### 🪐[Starname](https://github.com/iov-one/starnamed/tree/main/proto)
 
 
