@@ -32,6 +32,15 @@ Java, Swift, Go, Javascript, Python
  #### 🪐[BandProtocol](https://github.com/bandprotocol/chain/tree/master/proto)
 
 
+ #### 🪐[Bitcanna](https://github.com/BitCannaGlobal/bcna/tree/main/proto)
+
+
+ #### 🪐[Bitsong](https://github.com/bitsongofficial/go-bitsong/tree/main/proto)
+
+
+ #### 🪐[Canto](https://github.com/Canto-Network/Canto/tree/main/proto)
+
+
  #### 🪐[Crescent](https://github.com/crescent-network/crescent/tree/main/proto)
 
 
@@ -58,6 +67,9 @@ Java, Swift, Go, Javascript, Python
 
  #### 🪐[Persistence](https://github.com/persistenceOne/persistence-sdk/tree/master/proto)  [pstake](https://github.com/persistenceOne/pstake-native/tree/main/proto)
 
+
+ #### 🪐[Shentu](https://github.com/shentufoundation/shentu/tree/master/proto)
+ 
 
  #### 🪐[Starname](https://github.com/iov-one/starnamed/tree/main/proto)
 
