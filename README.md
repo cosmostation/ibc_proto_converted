@@ -50,7 +50,7 @@ Java, Swift, Go, Javascript, Python
  #### 🪐[Osmosis](https://github.com/osmosis-labs/osmosis/tree/main/proto)
 
 
- #### 🪐[Persistence](https://github.com/persistenceOne/persistence-sdk/tree/master/proto)
+ #### 🪐[Persistence](https://github.com/persistenceOne/persistence-sdk/tree/master/proto)  [pstake](https://github.com/persistenceOne/pstake-native/tree/main/proto)
 
 
  #### 🪐[Starname](https://github.com/iov-one/starnamed/tree/main/proto)
