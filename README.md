@@ -53,6 +53,9 @@ Java, Swift, Go, Javascript, Python
  #### 🪐[Starname](https://github.com/iov-one/starnamed/tree/main/proto)
 
 
+ #### 🪐[Stride](https://github.com/Stride-Labs/stride/tree/main/proto)
+
+
 
  #### 🪐[Tgrade](https://github.com/confio/tgrade/tree/main/proto)
 
