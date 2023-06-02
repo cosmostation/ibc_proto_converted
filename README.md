@@ -44,6 +44,9 @@ Java, Swift, Go, Javascript, Python
  #### 🪐Evmos [ethermint](https://github.com/evmos/evmos/tree/main/proto/ethermint)  [evmos](https://github.com/evmos/evmos/tree/main/proto/evmos)
 
 
+ #### 🪐[Gravity-Bridge](https://github.com/Gravity-Bridge/Gravity-Bridge/tree/main/module/proto)
+
+
  #### 🪐[Injective](https://github.com/InjectiveLabs/sdk-go/tree/master/proto)
 
 
