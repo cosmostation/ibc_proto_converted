@@ -50,6 +50,10 @@ Java, Swift, Go, Javascript, Python
  #### 🪐[Osmosis](https://github.com/osmosis-labs/osmosis/tree/main/proto)
 
 
+ #### 🪐[Starname](https://github.com/iov-one/starnamed/tree/main/proto)
+
+
+
  #### 🪐[Tgrade](https://github.com/confio/tgrade/tree/main/proto)
 
 
