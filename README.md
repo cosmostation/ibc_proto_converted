@@ -41,6 +41,9 @@ Java, Swift, Go, Javascript, Python
  #### 🪐Evmos [ethermint](https://github.com/evmos/evmos/tree/main/proto/ethermint)  [evmos](https://github.com/evmos/evmos/tree/main/proto/evmos)
 
 
+ #### 🪐[Kava](https://github.com/Kava-Labs/kava/tree/master/proto)
+
+
  #### 🪐[Osmosis](https://github.com/osmosis-labs/osmosis/tree/main/proto)
 
 
