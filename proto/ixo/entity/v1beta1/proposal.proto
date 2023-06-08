@@ -1,0 +1,11 @@
+syntax = "proto3";
+package ixo.entity.v1beta1;
+
+import "gogoproto/gogo.proto";
+
+option go_package = "github.com/ixofoundation/ixo-blockchain/x/entity/types";
+
+message InitializeNftContract {
+  uint64 NftContractCodeId = 1;
+  string NftMinterAddress = 2;
+}

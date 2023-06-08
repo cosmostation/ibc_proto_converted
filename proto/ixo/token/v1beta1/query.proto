@@ -1,0 +1,74 @@
+syntax = "proto3";
+package ixo.token.v1beta1;
+
+import "gogoproto/gogo.proto";
+import "google/api/annotations.proto";
+import "ixo/token/v1beta1/token.proto";
+import "cosmos/base/query/v1beta1/pagination.proto";
+
+option go_package = "github.com/ixofoundation/ixo-blockchain/x/token/types";
+
+// Query defines the gRPC querier service.
+service Query {
+  rpc Params(QueryParamsRequest) returns (QueryParamsResponse) {
+    option (google.api.http).get = "/ixo/token/params";
+  }
+  rpc TokenList(QueryTokenListRequest) returns (QueryTokenListResponse) {
+    option (google.api.http).get = "/ixo/token/{minter}";
+  }
+  rpc TokenDoc(QueryTokenDocRequest) returns (QueryTokenDocResponse) {
+    option (google.api.http).get = "/ixo/token/{minter}/{contract_address}";
+  }
+  rpc TokenMetadata(QueryTokenMetadataRequest)
+      returns (QueryTokenMetadataResponse) {
+    option (google.api.http).get = "/ixo/token/metadata/{id}";
+  }
+}
+
+message QueryParamsRequest {}
+
+message QueryParamsResponse {
+  // params holds all the parameters of this module.
+  Params params = 1 [ (gogoproto.nullable) = false ];
+}
+
+message QueryTokenListRequest {
+  cosmos.base.query.v1beta1.PageRequest pagination = 1;
+  // minter address to get list for
+  string minter = 2;
+}
+
+message QueryTokenListResponse {
+  cosmos.base.query.v1beta1.PageResponse pagination = 1;
+  repeated Token tokenDocs = 2 [ (gogoproto.nullable) = false ];
+}
+
+message QueryTokenDocRequest {
+  // minter address to get Token Doc for
+  string minter = 1;
+  string contract_address = 2;
+}
+
+message QueryTokenDocResponse {
+  Token tokenDoc = 1 [ (gogoproto.nullable) = false ];
+}
+
+message QueryTokenMetadataRequest { string id = 1; }
+
+message QueryTokenMetadataResponse {
+  string name = 1;
+  string description = 2;
+  string decimals = 3;
+  string image = 4;
+  string index = 5;
+  TokenMetadataProperties properties = 6;
+}
+
+message TokenMetadataProperties {
+  option (gogoproto.equal) = true;
+
+  string class = 1;
+  string collection = 2;
+  string cap = 3;
+  repeated TokenData linkedResources = 4;
+}

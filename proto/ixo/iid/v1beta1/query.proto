@@ -1,0 +1,43 @@
+syntax = "proto3";
+package ixo.iid.v1beta1;
+
+import "google/api/annotations.proto";
+import "ixo/iid/v1beta1/iid.proto";
+import "gogoproto/gogo.proto";
+import "cosmos/base/query/v1beta1/pagination.proto";
+
+option go_package = "github.com/ixofoundation/ixo-blockchain/x/iid/types";
+
+// Query defines the gRPC querier service.
+service Query {
+  // IidDocuments queries all iid documents that match the given status.
+  rpc IidDocuments(QueryIidDocumentsRequest)
+      returns (QueryIidDocumentsResponse) {
+    option (google.api.http).get = "/ixo/did/dids";
+  }
+  // IidDocument queries a iid documents with an id.
+  rpc IidDocument(QueryIidDocumentRequest) returns (QueryIidDocumentResponse) {
+    option (google.api.http).get = "/ixo/did/dids/{id}";
+  }
+}
+
+message QueryIidDocumentsRequest {
+  // pagination defines an optional pagination for the request.
+  cosmos.base.query.v1beta1.PageRequest pagination = 1;
+}
+
+message QueryIidDocumentsResponse {
+  repeated IidDocument iidDocuments = 1 [ (gogoproto.nullable) = false ];
+
+  // pagination defines the pagination in the response.
+  cosmos.base.query.v1beta1.PageResponse pagination = 2;
+}
+
+message QueryIidDocumentRequest {
+  // did id of iid document querying
+  string id = 1;
+}
+
+message QueryIidDocumentResponse {
+  IidDocument iidDocument = 1 [ (gogoproto.nullable) = false ];
+}

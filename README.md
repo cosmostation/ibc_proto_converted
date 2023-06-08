@@ -71,6 +71,13 @@ Java, Swift, Go, Javascript, Python
  #### 🪐[Injective](https://github.com/InjectiveLabs/sdk-go/tree/master/proto)
 
 
+ #### 🪐[Ixo](https://github.com/ixofoundation/ixo-blockchain/tree/main/proto)
+
+
+ #### 🪐[Juno](https://github.com/CosmosContracts/juno/tree/main/proto)
+
+
+
  #### 🪐[Kava](https://github.com/Kava-Labs/kava/tree/master/proto)
 
 

@@ -1,0 +1,15 @@
+syntax = "proto3";
+package ixo.token.v1beta1;
+
+import "gogoproto/gogo.proto";
+import "ixo/token/v1beta1/token.proto";
+
+option go_package = "github.com/ixofoundation/ixo-blockchain/x/token/types";
+
+// GenesisState defines the module's genesis state.
+message GenesisState {
+  Params params = 1 [ (gogoproto.nullable) = false ];
+  repeated Token tokens = 2 [ (gogoproto.nullable) = false ];
+  repeated TokenProperties token_properties = 3
+      [ (gogoproto.nullable) = false ];
+}

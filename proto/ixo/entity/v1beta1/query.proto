@@ -1,0 +1,76 @@
+syntax = "proto3";
+package ixo.entity.v1beta1;
+
+import "gogoproto/gogo.proto";
+import "google/api/annotations.proto";
+import "ixo/entity/v1beta1/entity.proto";
+import "ixo/iid/v1beta1/iid.proto";
+import "cosmos/base/query/v1beta1/pagination.proto";
+
+option go_package = "github.com/ixofoundation/ixo-blockchain/x/entity/types";
+
+// Query defines the gRPC querier service.
+service Query {
+  rpc Params(QueryParamsRequest) returns (QueryParamsResponse) {
+    option (google.api.http).get = "/ixo/entity/params";
+  }
+  rpc Entity(QueryEntityRequest) returns (QueryEntityResponse) {
+    option (google.api.http).get = "/ixo/entity/{id}";
+  }
+  rpc EntityMetaData(QueryEntityMetadataRequest)
+      returns (QueryEntityMetadataResponse) {
+    option (google.api.http).get = "/ixo/entity/{id}/metadata";
+  }
+  rpc EntityIidDocument(QueryEntityIidDocumentRequest)
+      returns (QueryEntityIidDocumentResponse) {
+    option (google.api.http).get = "/ixo/entity/{id}/iiddocument";
+  }
+  rpc EntityVerified(QueryEntityVerifiedRequest)
+      returns (QueryEntityVerifiedResponse) {
+    option (google.api.http).get = "/ixo/entity/{id}/verified";
+  }
+  rpc EntityList(QueryEntityListRequest) returns (QueryEntityListResponse) {
+    option (google.api.http).get = "/ixo/entity";
+  }
+}
+
+message QueryParamsRequest {}
+
+message QueryParamsResponse {
+  // params holds all the parameters of this module.
+  Params params = 1 [ (gogoproto.nullable) = false ];
+}
+
+message QueryEntityRequest { string id = 1; }
+
+message QueryEntityResponse {
+  Entity entity = 1 [ (gogoproto.nullable) = false ];
+  ixo.iid.v1beta1.IidDocument iidDocument = 2 [ (gogoproto.nullable) = false ];
+}
+
+message QueryEntityMetadataRequest { string id = 1; }
+
+message QueryEntityMetadataResponse {
+  Entity entity = 1 [ (gogoproto.nullable) = false ];
+}
+
+message QueryEntityIidDocumentRequest { string id = 1; }
+
+message QueryEntityIidDocumentResponse {
+  ixo.iid.v1beta1.IidDocument iidDocument = 1 [ (gogoproto.nullable) = false ];
+}
+
+message QueryEntityVerifiedRequest { string id = 1; }
+
+message QueryEntityVerifiedResponse { bool entity_verified = 1; }
+
+message QueryEntityListRequest {
+  cosmos.base.query.v1beta1.PageRequest pagination = 1;
+  // string type = 2;
+  // string status = 3;
+}
+
+message QueryEntityListResponse {
+  repeated Entity entities = 1 [ (gogoproto.nullable) = false ];
+  cosmos.base.query.v1beta1.PageResponse pagination = 2;
+}
