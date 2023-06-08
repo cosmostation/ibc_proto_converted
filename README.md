@@ -41,16 +41,28 @@ Java, Swift, Go, Javascript, Python
  #### 🪐[Canto](https://github.com/Canto-Network/Canto/tree/main/proto)
 
 
+ #### 🪐[Comdex](https://github.com/comdex-official/comdex/tree/development/proto)
+
+
+ #### 🪐[Coreum](https://github.com/CoreumFoundation/coreum/tree/master/proto)
+
+
  #### 🪐[Crescent](https://github.com/crescent-network/crescent/tree/main/proto)
 
 
  #### 🪐[Crypto-org](https://github.com/crypto-org-chain/chain-main/tree/master/proto)
 
 
+ #### 🪐[Cudos](https://github.com/CudoVentures/cudos-node/tree/cudos-master/proto)
+
+
  #### 🪐[Desmos](https://github.com/desmos-labs/desmos/tree/master/proto)
 
 
  #### 🪐Evmos [ethermint](https://github.com/evmos/evmos/tree/main/proto/ethermint)  [evmos](https://github.com/evmos/evmos/tree/main/proto/evmos)
+
+
+ #### 🪐[E-money](https://github.com/e-money/em-ledger)
 
 
  #### 🪐[Gravity-Bridge](https://github.com/Gravity-Bridge/Gravity-Bridge/tree/main/module/proto)
