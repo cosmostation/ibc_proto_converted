@@ -146,20 +146,22 @@ Java, Swift, Go, Javascript, Python
  #### 🪐[Stargaze](https://github.com/public-awesome/stargaze/tree/main/proto)
 
 
-
-
- 
-
  #### 🪐[Starname](https://github.com/iov-one/starnamed/tree/main/proto)
 
 
  #### 🪐[Stride](https://github.com/Stride-Labs/stride/tree/main/proto)
 
 
+ #### 🪐[Teritori](https://github.com/TERITORI/teritori-chain/tree/main/proto)
+
 
  #### 🪐[Tgrade](https://github.com/confio/tgrade/tree/main/proto)
 
 
+ #### 🪐[Umee](https://github.com/umee-network/umee/tree/main/proto)
+
+
+ #### 🪐[Xpla](https://github.com/xpladev/xpla/tree/main/proto)
 
 
  #### 🪐[IBC](https://github.com/cosmos/ibc-go/tree/main/proto) (ibc, capability)
