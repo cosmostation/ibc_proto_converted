@@ -77,6 +77,9 @@ Java, Swift, Go, Javascript, Python
  #### 🪐[Juno](https://github.com/CosmosContracts/juno/tree/main/proto)
 
 
+ #### 🪐[Kava](https://github.com/Kava-Labs/kava/tree/master/proto)
+
+
  #### 🪐[Kyve](https://github.com/KYVENetwork/chain/tree/main/proto)
 
 
@@ -95,17 +98,37 @@ Java, Swift, Go, Javascript, Python
  #### 🪐[Neutron](https://github.com/neutron-org/neutron/tree/main/proto)
 
 
+ #### 🪐[Noble](https://github.com/strangelove-ventures/noble/tree/main/proto)
 
 
+ #### 🪐[Nyx](https://github.com/nymtech/nyxd/tree/release/v0.31.1/proto)
 
 
- #### 🪐[Kava](https://github.com/Kava-Labs/kava/tree/master/proto)
+ #### 🪐[Omniflix](https://github.com/OmniFlix/omniflixhub/tree/main/proto)
+
+
+ #### 🪐[Onomy](https://github.com/onomyprotocol/onomy/tree/main/proto)
 
 
  #### 🪐[Osmosis](https://github.com/osmosis-labs/osmosis/tree/main/proto)
 
 
  #### 🪐[Persistence](https://github.com/persistenceOne/persistence-sdk/tree/master/proto)  [pstake](https://github.com/persistenceOne/pstake-native/tree/main/proto)
+
+
+ #### 🪐[Provenance](https://github.com/provenance-io/provenance/tree/main/proto)
+
+
+ #### 🪐[Quicksilver](https://github.com/ingenuity-build/quicksilver/tree/develop/proto)
+
+
+ #### 🪐[Regen](https://github.com/regen-network/regen-ledger/tree/main/proto)
+
+
+ #### 🪐[Rizon](https://github.com/rizon-world/rizon/tree/master/proto)
+
+
+
 
 
  #### 🪐[Shentu](https://github.com/shentufoundation/shentu/tree/master/proto)
