@@ -1,0 +1,843 @@
+package com.coreum.nft.v1beta1;
+
+import static io.grpc.MethodDescriptor.generateFullMethodName;
+
+/**
+ * <pre>
+ * Query defines the gRPC querier service.
+ * </pre>
+ */
+@javax.annotation.Generated(
+    value = "by gRPC proto compiler (version 1.55.1)",
+    comments = "Source: coreum/nft/v1beta1/query.proto")
+@io.grpc.stub.annotations.GrpcGenerated
+public final class QueryGrpc {
+
+  private QueryGrpc() {}
+
+  public static final String SERVICE_NAME = "coreum.nft.v1beta1.Query";
+
+  // Static method descriptors that strictly reflect the proto.
+  private static volatile io.grpc.MethodDescriptor<com.coreum.nft.v1beta1.QueryBalanceRequest,
+      com.coreum.nft.v1beta1.QueryBalanceResponse> getBalanceMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "Balance",
+      requestType = com.coreum.nft.v1beta1.QueryBalanceRequest.class,
+      responseType = com.coreum.nft.v1beta1.QueryBalanceResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.coreum.nft.v1beta1.QueryBalanceRequest,
+      com.coreum.nft.v1beta1.QueryBalanceResponse> getBalanceMethod() {
+    io.grpc.MethodDescriptor<com.coreum.nft.v1beta1.QueryBalanceRequest, com.coreum.nft.v1beta1.QueryBalanceResponse> getBalanceMethod;
+    if ((getBalanceMethod = QueryGrpc.getBalanceMethod) == null) {
+      synchronized (QueryGrpc.class) {
+        if ((getBalanceMethod = QueryGrpc.getBalanceMethod) == null) {
+          QueryGrpc.getBalanceMethod = getBalanceMethod =
+              io.grpc.MethodDescriptor.<com.coreum.nft.v1beta1.QueryBalanceRequest, com.coreum.nft.v1beta1.QueryBalanceResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Balance"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.coreum.nft.v1beta1.QueryBalanceRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.coreum.nft.v1beta1.QueryBalanceResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new QueryMethodDescriptorSupplier("Balance"))
+              .build();
+        }
+      }
+    }
+    return getBalanceMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.coreum.nft.v1beta1.QueryOwnerRequest,
+      com.coreum.nft.v1beta1.QueryOwnerResponse> getOwnerMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "Owner",
+      requestType = com.coreum.nft.v1beta1.QueryOwnerRequest.class,
+      responseType = com.coreum.nft.v1beta1.QueryOwnerResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.coreum.nft.v1beta1.QueryOwnerRequest,
+      com.coreum.nft.v1beta1.QueryOwnerResponse> getOwnerMethod() {
+    io.grpc.MethodDescriptor<com.coreum.nft.v1beta1.QueryOwnerRequest, com.coreum.nft.v1beta1.QueryOwnerResponse> getOwnerMethod;
+    if ((getOwnerMethod = QueryGrpc.getOwnerMethod) == null) {
+      synchronized (QueryGrpc.class) {
+        if ((getOwnerMethod = QueryGrpc.getOwnerMethod) == null) {
+          QueryGrpc.getOwnerMethod = getOwnerMethod =
+              io.grpc.MethodDescriptor.<com.coreum.nft.v1beta1.QueryOwnerRequest, com.coreum.nft.v1beta1.QueryOwnerResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Owner"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.coreum.nft.v1beta1.QueryOwnerRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.coreum.nft.v1beta1.QueryOwnerResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new QueryMethodDescriptorSupplier("Owner"))
+              .build();
+        }
+      }
+    }
+    return getOwnerMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.coreum.nft.v1beta1.QuerySupplyRequest,
+      com.coreum.nft.v1beta1.QuerySupplyResponse> getSupplyMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "Supply",
+      requestType = com.coreum.nft.v1beta1.QuerySupplyRequest.class,
+      responseType = com.coreum.nft.v1beta1.QuerySupplyResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.coreum.nft.v1beta1.QuerySupplyRequest,
+      com.coreum.nft.v1beta1.QuerySupplyResponse> getSupplyMethod() {
+    io.grpc.MethodDescriptor<com.coreum.nft.v1beta1.QuerySupplyRequest, com.coreum.nft.v1beta1.QuerySupplyResponse> getSupplyMethod;
+    if ((getSupplyMethod = QueryGrpc.getSupplyMethod) == null) {
+      synchronized (QueryGrpc.class) {
+        if ((getSupplyMethod = QueryGrpc.getSupplyMethod) == null) {
+          QueryGrpc.getSupplyMethod = getSupplyMethod =
+              io.grpc.MethodDescriptor.<com.coreum.nft.v1beta1.QuerySupplyRequest, com.coreum.nft.v1beta1.QuerySupplyResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Supply"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.coreum.nft.v1beta1.QuerySupplyRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.coreum.nft.v1beta1.QuerySupplyResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new QueryMethodDescriptorSupplier("Supply"))
+              .build();
+        }
+      }
+    }
+    return getSupplyMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.coreum.nft.v1beta1.QueryNFTsRequest,
+      com.coreum.nft.v1beta1.QueryNFTsResponse> getNFTsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "NFTs",
+      requestType = com.coreum.nft.v1beta1.QueryNFTsRequest.class,
+      responseType = com.coreum.nft.v1beta1.QueryNFTsResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.coreum.nft.v1beta1.QueryNFTsRequest,
+      com.coreum.nft.v1beta1.QueryNFTsResponse> getNFTsMethod() {
+    io.grpc.MethodDescriptor<com.coreum.nft.v1beta1.QueryNFTsRequest, com.coreum.nft.v1beta1.QueryNFTsResponse> getNFTsMethod;
+    if ((getNFTsMethod = QueryGrpc.getNFTsMethod) == null) {
+      synchronized (QueryGrpc.class) {
+        if ((getNFTsMethod = QueryGrpc.getNFTsMethod) == null) {
+          QueryGrpc.getNFTsMethod = getNFTsMethod =
+              io.grpc.MethodDescriptor.<com.coreum.nft.v1beta1.QueryNFTsRequest, com.coreum.nft.v1beta1.QueryNFTsResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "NFTs"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.coreum.nft.v1beta1.QueryNFTsRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.coreum.nft.v1beta1.QueryNFTsResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new QueryMethodDescriptorSupplier("NFTs"))
+              .build();
+        }
+      }
+    }
+    return getNFTsMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.coreum.nft.v1beta1.QueryNFTRequest,
+      com.coreum.nft.v1beta1.QueryNFTResponse> getNFTMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "NFT",
+      requestType = com.coreum.nft.v1beta1.QueryNFTRequest.class,
+      responseType = com.coreum.nft.v1beta1.QueryNFTResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.coreum.nft.v1beta1.QueryNFTRequest,
+      com.coreum.nft.v1beta1.QueryNFTResponse> getNFTMethod() {
+    io.grpc.MethodDescriptor<com.coreum.nft.v1beta1.QueryNFTRequest, com.coreum.nft.v1beta1.QueryNFTResponse> getNFTMethod;
+    if ((getNFTMethod = QueryGrpc.getNFTMethod) == null) {
+      synchronized (QueryGrpc.class) {
+        if ((getNFTMethod = QueryGrpc.getNFTMethod) == null) {
+          QueryGrpc.getNFTMethod = getNFTMethod =
+              io.grpc.MethodDescriptor.<com.coreum.nft.v1beta1.QueryNFTRequest, com.coreum.nft.v1beta1.QueryNFTResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "NFT"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.coreum.nft.v1beta1.QueryNFTRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.coreum.nft.v1beta1.QueryNFTResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new QueryMethodDescriptorSupplier("NFT"))
+              .build();
+        }
+      }
+    }
+    return getNFTMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.coreum.nft.v1beta1.QueryClassRequest,
+      com.coreum.nft.v1beta1.QueryClassResponse> getClassMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "Class",
+      requestType = com.coreum.nft.v1beta1.QueryClassRequest.class,
+      responseType = com.coreum.nft.v1beta1.QueryClassResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.coreum.nft.v1beta1.QueryClassRequest,
+      com.coreum.nft.v1beta1.QueryClassResponse> getClassMethod() {
+    io.grpc.MethodDescriptor<com.coreum.nft.v1beta1.QueryClassRequest, com.coreum.nft.v1beta1.QueryClassResponse> getClassMethod;
+    if ((getClassMethod = QueryGrpc.getClassMethod) == null) {
+      synchronized (QueryGrpc.class) {
+        if ((getClassMethod = QueryGrpc.getClassMethod) == null) {
+          QueryGrpc.getClassMethod = getClassMethod =
+              io.grpc.MethodDescriptor.<com.coreum.nft.v1beta1.QueryClassRequest, com.coreum.nft.v1beta1.QueryClassResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Class"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.coreum.nft.v1beta1.QueryClassRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.coreum.nft.v1beta1.QueryClassResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new QueryMethodDescriptorSupplier("Class"))
+              .build();
+        }
+      }
+    }
+    return getClassMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.coreum.nft.v1beta1.QueryClassesRequest,
+      com.coreum.nft.v1beta1.QueryClassesResponse> getClassesMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "Classes",
+      requestType = com.coreum.nft.v1beta1.QueryClassesRequest.class,
+      responseType = com.coreum.nft.v1beta1.QueryClassesResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.coreum.nft.v1beta1.QueryClassesRequest,
+      com.coreum.nft.v1beta1.QueryClassesResponse> getClassesMethod() {
+    io.grpc.MethodDescriptor<com.coreum.nft.v1beta1.QueryClassesRequest, com.coreum.nft.v1beta1.QueryClassesResponse> getClassesMethod;
+    if ((getClassesMethod = QueryGrpc.getClassesMethod) == null) {
+      synchronized (QueryGrpc.class) {
+        if ((getClassesMethod = QueryGrpc.getClassesMethod) == null) {
+          QueryGrpc.getClassesMethod = getClassesMethod =
+              io.grpc.MethodDescriptor.<com.coreum.nft.v1beta1.QueryClassesRequest, com.coreum.nft.v1beta1.QueryClassesResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Classes"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.coreum.nft.v1beta1.QueryClassesRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.coreum.nft.v1beta1.QueryClassesResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new QueryMethodDescriptorSupplier("Classes"))
+              .build();
+        }
+      }
+    }
+    return getClassesMethod;
+  }
+
+  /**
+   * Creates a new async stub that supports all call types for the service
+   */
+  public static QueryStub newStub(io.grpc.Channel channel) {
+    io.grpc.stub.AbstractStub.StubFactory<QueryStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<QueryStub>() {
+        @java.lang.Override
+        public QueryStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new QueryStub(channel, callOptions);
+        }
+      };
+    return QueryStub.newStub(factory, channel);
+  }
+
+  /**
+   * Creates a new blocking-style stub that supports unary and streaming output calls on the service
+   */
+  public static QueryBlockingStub newBlockingStub(
+      io.grpc.Channel channel) {
+    io.grpc.stub.AbstractStub.StubFactory<QueryBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<QueryBlockingStub>() {
+        @java.lang.Override
+        public QueryBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new QueryBlockingStub(channel, callOptions);
+        }
+      };
+    return QueryBlockingStub.newStub(factory, channel);
+  }
+
+  /**
+   * Creates a new ListenableFuture-style stub that supports unary calls on the service
+   */
+  public static QueryFutureStub newFutureStub(
+      io.grpc.Channel channel) {
+    io.grpc.stub.AbstractStub.StubFactory<QueryFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<QueryFutureStub>() {
+        @java.lang.Override
+        public QueryFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new QueryFutureStub(channel, callOptions);
+        }
+      };
+    return QueryFutureStub.newStub(factory, channel);
+  }
+
+  /**
+   * <pre>
+   * Query defines the gRPC querier service.
+   * </pre>
+   */
+  public interface AsyncService {
+
+    /**
+     * <pre>
+     * Balance queries the number of NFTs of a given class owned by the owner, same as balanceOf in ERC721
+     * </pre>
+     */
+    default void balance(com.coreum.nft.v1beta1.QueryBalanceRequest request,
+        io.grpc.stub.StreamObserver<com.coreum.nft.v1beta1.QueryBalanceResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getBalanceMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Owner queries the owner of the NFT based on its class and id, same as ownerOf in ERC721
+     * </pre>
+     */
+    default void owner(com.coreum.nft.v1beta1.QueryOwnerRequest request,
+        io.grpc.stub.StreamObserver<com.coreum.nft.v1beta1.QueryOwnerResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getOwnerMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Supply queries the number of NFTs from the given class, same as totalSupply of ERC721.
+     * </pre>
+     */
+    default void supply(com.coreum.nft.v1beta1.QuerySupplyRequest request,
+        io.grpc.stub.StreamObserver<com.coreum.nft.v1beta1.QuerySupplyResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSupplyMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * NFTs queries all NFTs of a given class or owner,choose at least one of the two, similar to tokenByIndex in
+     * ERC721Enumerable
+     * </pre>
+     */
+    default void nFTs(com.coreum.nft.v1beta1.QueryNFTsRequest request,
+        io.grpc.stub.StreamObserver<com.coreum.nft.v1beta1.QueryNFTsResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getNFTsMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * NFT queries an NFT based on its class and id.
+     * </pre>
+     */
+    default void nFT(com.coreum.nft.v1beta1.QueryNFTRequest request,
+        io.grpc.stub.StreamObserver<com.coreum.nft.v1beta1.QueryNFTResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getNFTMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Class queries an NFT class based on its id
+     * </pre>
+     */
+    default void class_(com.coreum.nft.v1beta1.QueryClassRequest request,
+        io.grpc.stub.StreamObserver<com.coreum.nft.v1beta1.QueryClassResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getClassMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Classes queries all NFT classes
+     * </pre>
+     */
+    default void classes(com.coreum.nft.v1beta1.QueryClassesRequest request,
+        io.grpc.stub.StreamObserver<com.coreum.nft.v1beta1.QueryClassesResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getClassesMethod(), responseObserver);
+    }
+  }
+
+  /**
+   * Base class for the server implementation of the service Query.
+   * <pre>
+   * Query defines the gRPC querier service.
+   * </pre>
+   */
+  public static abstract class QueryImplBase
+      implements io.grpc.BindableService, AsyncService {
+
+    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
+      return QueryGrpc.bindService(this);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do asynchronous rpc calls to service Query.
+   * <pre>
+   * Query defines the gRPC querier service.
+   * </pre>
+   */
+  public static final class QueryStub
+      extends io.grpc.stub.AbstractAsyncStub<QueryStub> {
+    private QueryStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      super(channel, callOptions);
+    }
+
+    @java.lang.Override
+    protected QueryStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      return new QueryStub(channel, callOptions);
+    }
+
+    /**
+     * <pre>
+     * Balance queries the number of NFTs of a given class owned by the owner, same as balanceOf in ERC721
+     * </pre>
+     */
+    public void balance(com.coreum.nft.v1beta1.QueryBalanceRequest request,
+        io.grpc.stub.StreamObserver<com.coreum.nft.v1beta1.QueryBalanceResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getBalanceMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Owner queries the owner of the NFT based on its class and id, same as ownerOf in ERC721
+     * </pre>
+     */
+    public void owner(com.coreum.nft.v1beta1.QueryOwnerRequest request,
+        io.grpc.stub.StreamObserver<com.coreum.nft.v1beta1.QueryOwnerResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getOwnerMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Supply queries the number of NFTs from the given class, same as totalSupply of ERC721.
+     * </pre>
+     */
+    public void supply(com.coreum.nft.v1beta1.QuerySupplyRequest request,
+        io.grpc.stub.StreamObserver<com.coreum.nft.v1beta1.QuerySupplyResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getSupplyMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * NFTs queries all NFTs of a given class or owner,choose at least one of the two, similar to tokenByIndex in
+     * ERC721Enumerable
+     * </pre>
+     */
+    public void nFTs(com.coreum.nft.v1beta1.QueryNFTsRequest request,
+        io.grpc.stub.StreamObserver<com.coreum.nft.v1beta1.QueryNFTsResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getNFTsMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * NFT queries an NFT based on its class and id.
+     * </pre>
+     */
+    public void nFT(com.coreum.nft.v1beta1.QueryNFTRequest request,
+        io.grpc.stub.StreamObserver<com.coreum.nft.v1beta1.QueryNFTResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getNFTMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Class queries an NFT class based on its id
+     * </pre>
+     */
+    public void class_(com.coreum.nft.v1beta1.QueryClassRequest request,
+        io.grpc.stub.StreamObserver<com.coreum.nft.v1beta1.QueryClassResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getClassMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Classes queries all NFT classes
+     * </pre>
+     */
+    public void classes(com.coreum.nft.v1beta1.QueryClassesRequest request,
+        io.grpc.stub.StreamObserver<com.coreum.nft.v1beta1.QueryClassesResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getClassesMethod(), getCallOptions()), request, responseObserver);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do synchronous rpc calls to service Query.
+   * <pre>
+   * Query defines the gRPC querier service.
+   * </pre>
+   */
+  public static final class QueryBlockingStub
+      extends io.grpc.stub.AbstractBlockingStub<QueryBlockingStub> {
+    private QueryBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      super(channel, callOptions);
+    }
+
+    @java.lang.Override
+    protected QueryBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      return new QueryBlockingStub(channel, callOptions);
+    }
+
+    /**
+     * <pre>
+     * Balance queries the number of NFTs of a given class owned by the owner, same as balanceOf in ERC721
+     * </pre>
+     */
+    public com.coreum.nft.v1beta1.QueryBalanceResponse balance(com.coreum.nft.v1beta1.QueryBalanceRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getBalanceMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Owner queries the owner of the NFT based on its class and id, same as ownerOf in ERC721
+     * </pre>
+     */
+    public com.coreum.nft.v1beta1.QueryOwnerResponse owner(com.coreum.nft.v1beta1.QueryOwnerRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getOwnerMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Supply queries the number of NFTs from the given class, same as totalSupply of ERC721.
+     * </pre>
+     */
+    public com.coreum.nft.v1beta1.QuerySupplyResponse supply(com.coreum.nft.v1beta1.QuerySupplyRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getSupplyMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * NFTs queries all NFTs of a given class or owner,choose at least one of the two, similar to tokenByIndex in
+     * ERC721Enumerable
+     * </pre>
+     */
+    public com.coreum.nft.v1beta1.QueryNFTsResponse nFTs(com.coreum.nft.v1beta1.QueryNFTsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getNFTsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * NFT queries an NFT based on its class and id.
+     * </pre>
+     */
+    public com.coreum.nft.v1beta1.QueryNFTResponse nFT(com.coreum.nft.v1beta1.QueryNFTRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getNFTMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Class queries an NFT class based on its id
+     * </pre>
+     */
+    public com.coreum.nft.v1beta1.QueryClassResponse class_(com.coreum.nft.v1beta1.QueryClassRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getClassMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Classes queries all NFT classes
+     * </pre>
+     */
+    public com.coreum.nft.v1beta1.QueryClassesResponse classes(com.coreum.nft.v1beta1.QueryClassesRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getClassesMethod(), getCallOptions(), request);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do ListenableFuture-style rpc calls to service Query.
+   * <pre>
+   * Query defines the gRPC querier service.
+   * </pre>
+   */
+  public static final class QueryFutureStub
+      extends io.grpc.stub.AbstractFutureStub<QueryFutureStub> {
+    private QueryFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      super(channel, callOptions);
+    }
+
+    @java.lang.Override
+    protected QueryFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      return new QueryFutureStub(channel, callOptions);
+    }
+
+    /**
+     * <pre>
+     * Balance queries the number of NFTs of a given class owned by the owner, same as balanceOf in ERC721
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.coreum.nft.v1beta1.QueryBalanceResponse> balance(
+        com.coreum.nft.v1beta1.QueryBalanceRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getBalanceMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Owner queries the owner of the NFT based on its class and id, same as ownerOf in ERC721
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.coreum.nft.v1beta1.QueryOwnerResponse> owner(
+        com.coreum.nft.v1beta1.QueryOwnerRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getOwnerMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Supply queries the number of NFTs from the given class, same as totalSupply of ERC721.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.coreum.nft.v1beta1.QuerySupplyResponse> supply(
+        com.coreum.nft.v1beta1.QuerySupplyRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getSupplyMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * NFTs queries all NFTs of a given class or owner,choose at least one of the two, similar to tokenByIndex in
+     * ERC721Enumerable
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.coreum.nft.v1beta1.QueryNFTsResponse> nFTs(
+        com.coreum.nft.v1beta1.QueryNFTsRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getNFTsMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * NFT queries an NFT based on its class and id.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.coreum.nft.v1beta1.QueryNFTResponse> nFT(
+        com.coreum.nft.v1beta1.QueryNFTRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getNFTMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Class queries an NFT class based on its id
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.coreum.nft.v1beta1.QueryClassResponse> class_(
+        com.coreum.nft.v1beta1.QueryClassRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getClassMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Classes queries all NFT classes
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.coreum.nft.v1beta1.QueryClassesResponse> classes(
+        com.coreum.nft.v1beta1.QueryClassesRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getClassesMethod(), getCallOptions()), request);
+    }
+  }
+
+  private static final int METHODID_BALANCE = 0;
+  private static final int METHODID_OWNER = 1;
+  private static final int METHODID_SUPPLY = 2;
+  private static final int METHODID_NFTS = 3;
+  private static final int METHODID_NFT = 4;
+  private static final int METHODID_CLASS = 5;
+  private static final int METHODID_CLASSES = 6;
+
+  private static final class MethodHandlers<Req, Resp> implements
+      io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
+      io.grpc.stub.ServerCalls.ServerStreamingMethod<Req, Resp>,
+      io.grpc.stub.ServerCalls.ClientStreamingMethod<Req, Resp>,
+      io.grpc.stub.ServerCalls.BidiStreamingMethod<Req, Resp> {
+    private final AsyncService serviceImpl;
+    private final int methodId;
+
+    MethodHandlers(AsyncService serviceImpl, int methodId) {
+      this.serviceImpl = serviceImpl;
+      this.methodId = methodId;
+    }
+
+    @java.lang.Override
+    @java.lang.SuppressWarnings("unchecked")
+    public void invoke(Req request, io.grpc.stub.StreamObserver<Resp> responseObserver) {
+      switch (methodId) {
+        case METHODID_BALANCE:
+          serviceImpl.balance((com.coreum.nft.v1beta1.QueryBalanceRequest) request,
+              (io.grpc.stub.StreamObserver<com.coreum.nft.v1beta1.QueryBalanceResponse>) responseObserver);
+          break;
+        case METHODID_OWNER:
+          serviceImpl.owner((com.coreum.nft.v1beta1.QueryOwnerRequest) request,
+              (io.grpc.stub.StreamObserver<com.coreum.nft.v1beta1.QueryOwnerResponse>) responseObserver);
+          break;
+        case METHODID_SUPPLY:
+          serviceImpl.supply((com.coreum.nft.v1beta1.QuerySupplyRequest) request,
+              (io.grpc.stub.StreamObserver<com.coreum.nft.v1beta1.QuerySupplyResponse>) responseObserver);
+          break;
+        case METHODID_NFTS:
+          serviceImpl.nFTs((com.coreum.nft.v1beta1.QueryNFTsRequest) request,
+              (io.grpc.stub.StreamObserver<com.coreum.nft.v1beta1.QueryNFTsResponse>) responseObserver);
+          break;
+        case METHODID_NFT:
+          serviceImpl.nFT((com.coreum.nft.v1beta1.QueryNFTRequest) request,
+              (io.grpc.stub.StreamObserver<com.coreum.nft.v1beta1.QueryNFTResponse>) responseObserver);
+          break;
+        case METHODID_CLASS:
+          serviceImpl.class_((com.coreum.nft.v1beta1.QueryClassRequest) request,
+              (io.grpc.stub.StreamObserver<com.coreum.nft.v1beta1.QueryClassResponse>) responseObserver);
+          break;
+        case METHODID_CLASSES:
+          serviceImpl.classes((com.coreum.nft.v1beta1.QueryClassesRequest) request,
+              (io.grpc.stub.StreamObserver<com.coreum.nft.v1beta1.QueryClassesResponse>) responseObserver);
+          break;
+        default:
+          throw new AssertionError();
+      }
+    }
+
+    @java.lang.Override
+    @java.lang.SuppressWarnings("unchecked")
+    public io.grpc.stub.StreamObserver<Req> invoke(
+        io.grpc.stub.StreamObserver<Resp> responseObserver) {
+      switch (methodId) {
+        default:
+          throw new AssertionError();
+      }
+    }
+  }
+
+  public static final io.grpc.ServerServiceDefinition bindService(AsyncService service) {
+    return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
+        .addMethod(
+          getBalanceMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.coreum.nft.v1beta1.QueryBalanceRequest,
+              com.coreum.nft.v1beta1.QueryBalanceResponse>(
+                service, METHODID_BALANCE)))
+        .addMethod(
+          getOwnerMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.coreum.nft.v1beta1.QueryOwnerRequest,
+              com.coreum.nft.v1beta1.QueryOwnerResponse>(
+                service, METHODID_OWNER)))
+        .addMethod(
+          getSupplyMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.coreum.nft.v1beta1.QuerySupplyRequest,
+              com.coreum.nft.v1beta1.QuerySupplyResponse>(
+                service, METHODID_SUPPLY)))
+        .addMethod(
+          getNFTsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.coreum.nft.v1beta1.QueryNFTsRequest,
+              com.coreum.nft.v1beta1.QueryNFTsResponse>(
+                service, METHODID_NFTS)))
+        .addMethod(
+          getNFTMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.coreum.nft.v1beta1.QueryNFTRequest,
+              com.coreum.nft.v1beta1.QueryNFTResponse>(
+                service, METHODID_NFT)))
+        .addMethod(
+          getClassMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.coreum.nft.v1beta1.QueryClassRequest,
+              com.coreum.nft.v1beta1.QueryClassResponse>(
+                service, METHODID_CLASS)))
+        .addMethod(
+          getClassesMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.coreum.nft.v1beta1.QueryClassesRequest,
+              com.coreum.nft.v1beta1.QueryClassesResponse>(
+                service, METHODID_CLASSES)))
+        .build();
+  }
+
+  private static abstract class QueryBaseDescriptorSupplier
+      implements io.grpc.protobuf.ProtoFileDescriptorSupplier, io.grpc.protobuf.ProtoServiceDescriptorSupplier {
+    QueryBaseDescriptorSupplier() {}
+
+    @java.lang.Override
+    public com.google.protobuf.Descriptors.FileDescriptor getFileDescriptor() {
+      return com.coreum.nft.v1beta1.QueryProto.getDescriptor();
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Descriptors.ServiceDescriptor getServiceDescriptor() {
+      return getFileDescriptor().findServiceByName("Query");
+    }
+  }
+
+  private static final class QueryFileDescriptorSupplier
+      extends QueryBaseDescriptorSupplier {
+    QueryFileDescriptorSupplier() {}
+  }
+
+  private static final class QueryMethodDescriptorSupplier
+      extends QueryBaseDescriptorSupplier
+      implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
+    private final String methodName;
+
+    QueryMethodDescriptorSupplier(String methodName) {
+      this.methodName = methodName;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Descriptors.MethodDescriptor getMethodDescriptor() {
+      return getServiceDescriptor().findMethodByName(methodName);
+    }
+  }
+
+  private static volatile io.grpc.ServiceDescriptor serviceDescriptor;
+
+  public static io.grpc.ServiceDescriptor getServiceDescriptor() {
+    io.grpc.ServiceDescriptor result = serviceDescriptor;
+    if (result == null) {
+      synchronized (QueryGrpc.class) {
+        result = serviceDescriptor;
+        if (result == null) {
+          serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
+              .setSchemaDescriptor(new QueryFileDescriptorSupplier())
+              .addMethod(getBalanceMethod())
+              .addMethod(getOwnerMethod())
+              .addMethod(getSupplyMethod())
+              .addMethod(getNFTsMethod())
+              .addMethod(getNFTMethod())
+              .addMethod(getClassMethod())
+              .addMethod(getClassesMethod())
+              .build();
+        }
+      }
+    }
+    return result;
+  }
+}
