@@ -113,6 +113,9 @@ Java, Swift, Go, Javascript, Python
  #### 🪐[Osmosis](https://github.com/osmosis-labs/osmosis/tree/main/proto)
 
 
+ #### 🪐[Passage](https://github.com/envadiv/Passage3D/tree/main/proto)
+
+
  #### 🪐[Persistence](https://github.com/persistenceOne/persistence-sdk/tree/master/proto)  [pstake](https://github.com/persistenceOne/pstake-native/tree/main/proto)
 
 
