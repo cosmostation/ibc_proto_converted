@@ -1,0 +1,20 @@
+syntax = "proto3";
+package sentinel.subscription.v2;
+
+import "gogoproto/gogo.proto";
+
+option go_package = "github.com/sentinel-official/hub/x/subscription/types";
+option (gogoproto.equal_all)           = false;
+option (gogoproto.goproto_getters_all) = false;
+
+message Allocation {
+  string address       = 1;
+  string granted_bytes = 2 [
+    (gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int",
+    (gogoproto.nullable)   = false
+  ];
+  string utilised_bytes = 3 [
+    (gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int",
+    (gogoproto.nullable)   = false
+  ];
+}

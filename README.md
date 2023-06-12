@@ -128,10 +128,26 @@ Java, Swift, Go, Javascript, Python
  #### 🪐[Rizon](https://github.com/rizon-world/rizon/tree/master/proto)
 
 
+ #### 🪐[Secret](https://github.com/scrtlabs/SecretNetwork/tree/master/proto)
 
+
+ #### 🪐[Sentinel](https://github.com/sentinel-official/hub/tree/development/proto)
 
 
  #### 🪐[Shentu](https://github.com/shentufoundation/shentu/tree/master/proto)
+
+
+ #### 🪐[Sommelier](https://github.com/PeggyJV/sommelier/tree/main/proto)
+
+
+ #### 🪐[Stafi](https://github.com/stafihub/stafihub/tree/main/proto)
+
+
+ #### 🪐[Stargaze](https://github.com/public-awesome/stargaze/tree/main/proto)
+
+
+
+
  
 
  #### 🪐[Starname](https://github.com/iov-one/starnamed/tree/main/proto)
