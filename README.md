@@ -9,7 +9,7 @@ Using [buf](https://github.com/bufbuild)
 
 
 ## Converted files by language
-Java, Swift, Go, Javascript, Python 
+[Java](https://github.com/cosmostation/proto_convert/tree/main/gen/java), [Swift](https://github.com/cosmos/cosmos-sdk/tree/main/proto), [Javascript](https://github.com/cosmostation/proto_convert/tree/main/gen/js), [Python](https://github.com/cosmostation/proto_convert/tree/main/gen/python) 
 
 
 
