@@ -1,4 +1,4 @@
-// source: quasar/qoracle/osmosis/query.proto
+// source: osmosis/pool-incentives/v1beta1/query.proto
 /**
  * @fileoverview
  * @enhanceable
@@ -11,7 +11,7 @@
 /* eslint-disable */
 // @ts-nocheck
 
-goog.provide('proto.quasarlabs.quasarnode.qoracle.osmosis.QueryIncentivizedPoolsRequest');
+goog.provide('proto.osmosis.poolincentives.v1beta1.QueryIncentivizedPoolsRequest');
 
 goog.require('jspb.BinaryReader');
 goog.require('jspb.BinaryWriter');
@@ -27,16 +27,16 @@ goog.require('jspb.Message');
  * @extends {jspb.Message}
  * @constructor
  */
-proto.quasarlabs.quasarnode.qoracle.osmosis.QueryIncentivizedPoolsRequest = function(opt_data) {
+proto.osmosis.poolincentives.v1beta1.QueryIncentivizedPoolsRequest = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.quasarlabs.quasarnode.qoracle.osmosis.QueryIncentivizedPoolsRequest, jspb.Message);
+goog.inherits(proto.osmosis.poolincentives.v1beta1.QueryIncentivizedPoolsRequest, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.quasarlabs.quasarnode.qoracle.osmosis.QueryIncentivizedPoolsRequest.displayName = 'proto.quasarlabs.quasarnode.qoracle.osmosis.QueryIncentivizedPoolsRequest';
+  proto.osmosis.poolincentives.v1beta1.QueryIncentivizedPoolsRequest.displayName = 'proto.osmosis.poolincentives.v1beta1.QueryIncentivizedPoolsRequest';
 }
 
 
@@ -54,8 +54,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.quasarlabs.quasarnode.qoracle.osmosis.QueryIncentivizedPoolsRequest.prototype.toObject = function(opt_includeInstance) {
-  return proto.quasarlabs.quasarnode.qoracle.osmosis.QueryIncentivizedPoolsRequest.toObject(opt_includeInstance, this);
+proto.osmosis.poolincentives.v1beta1.QueryIncentivizedPoolsRequest.prototype.toObject = function(opt_includeInstance) {
+  return proto.osmosis.poolincentives.v1beta1.QueryIncentivizedPoolsRequest.toObject(opt_includeInstance, this);
 };
 
 
@@ -64,11 +64,11 @@ proto.quasarlabs.quasarnode.qoracle.osmosis.QueryIncentivizedPoolsRequest.protot
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.quasarlabs.quasarnode.qoracle.osmosis.QueryIncentivizedPoolsRequest} msg The msg instance to transform.
+ * @param {!proto.osmosis.poolincentives.v1beta1.QueryIncentivizedPoolsRequest} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.quasarlabs.quasarnode.qoracle.osmosis.QueryIncentivizedPoolsRequest.toObject = function(includeInstance, msg) {
+proto.osmosis.poolincentives.v1beta1.QueryIncentivizedPoolsRequest.toObject = function(includeInstance, msg) {
   var f, obj = {
 
   };
@@ -84,23 +84,23 @@ proto.quasarlabs.quasarnode.qoracle.osmosis.QueryIncentivizedPoolsRequest.toObje
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.quasarlabs.quasarnode.qoracle.osmosis.QueryIncentivizedPoolsRequest}
+ * @return {!proto.osmosis.poolincentives.v1beta1.QueryIncentivizedPoolsRequest}
  */
-proto.quasarlabs.quasarnode.qoracle.osmosis.QueryIncentivizedPoolsRequest.deserializeBinary = function(bytes) {
+proto.osmosis.poolincentives.v1beta1.QueryIncentivizedPoolsRequest.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.quasarlabs.quasarnode.qoracle.osmosis.QueryIncentivizedPoolsRequest;
-  return proto.quasarlabs.quasarnode.qoracle.osmosis.QueryIncentivizedPoolsRequest.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.osmosis.poolincentives.v1beta1.QueryIncentivizedPoolsRequest;
+  return proto.osmosis.poolincentives.v1beta1.QueryIncentivizedPoolsRequest.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.quasarlabs.quasarnode.qoracle.osmosis.QueryIncentivizedPoolsRequest} msg The message object to deserialize into.
+ * @param {!proto.osmosis.poolincentives.v1beta1.QueryIncentivizedPoolsRequest} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.quasarlabs.quasarnode.qoracle.osmosis.QueryIncentivizedPoolsRequest}
+ * @return {!proto.osmosis.poolincentives.v1beta1.QueryIncentivizedPoolsRequest}
  */
-proto.quasarlabs.quasarnode.qoracle.osmosis.QueryIncentivizedPoolsRequest.deserializeBinaryFromReader = function(msg, reader) {
+proto.osmosis.poolincentives.v1beta1.QueryIncentivizedPoolsRequest.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -120,9 +120,9 @@ proto.quasarlabs.quasarnode.qoracle.osmosis.QueryIncentivizedPoolsRequest.deseri
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.quasarlabs.quasarnode.qoracle.osmosis.QueryIncentivizedPoolsRequest.prototype.serializeBinary = function() {
+proto.osmosis.poolincentives.v1beta1.QueryIncentivizedPoolsRequest.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.quasarlabs.quasarnode.qoracle.osmosis.QueryIncentivizedPoolsRequest.serializeBinaryToWriter(this, writer);
+  proto.osmosis.poolincentives.v1beta1.QueryIncentivizedPoolsRequest.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -130,11 +130,11 @@ proto.quasarlabs.quasarnode.qoracle.osmosis.QueryIncentivizedPoolsRequest.protot
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.quasarlabs.quasarnode.qoracle.osmosis.QueryIncentivizedPoolsRequest} message
+ * @param {!proto.osmosis.poolincentives.v1beta1.QueryIncentivizedPoolsRequest} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.quasarlabs.quasarnode.qoracle.osmosis.QueryIncentivizedPoolsRequest.serializeBinaryToWriter = function(message, writer) {
+proto.osmosis.poolincentives.v1beta1.QueryIncentivizedPoolsRequest.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
 };
 

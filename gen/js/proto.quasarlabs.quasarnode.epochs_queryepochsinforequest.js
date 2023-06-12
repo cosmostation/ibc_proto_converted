@@ -1,4 +1,4 @@
-// source: quasar/qoracle/osmosis/query.proto
+// source: quasar/epochs/query.proto
 /**
  * @fileoverview
  * @enhanceable
@@ -11,7 +11,7 @@
 /* eslint-disable */
 // @ts-nocheck
 
-goog.provide('proto.quasarlabs.quasarnode.qoracle.osmosis.QueryIncentivizedPoolsRequest');
+goog.provide('proto.quasarlabs.quasarnode.epochs.QueryEpochsInfoRequest');
 
 goog.require('jspb.BinaryReader');
 goog.require('jspb.BinaryWriter');
@@ -27,16 +27,16 @@ goog.require('jspb.Message');
  * @extends {jspb.Message}
  * @constructor
  */
-proto.quasarlabs.quasarnode.qoracle.osmosis.QueryIncentivizedPoolsRequest = function(opt_data) {
+proto.quasarlabs.quasarnode.epochs.QueryEpochsInfoRequest = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.quasarlabs.quasarnode.qoracle.osmosis.QueryIncentivizedPoolsRequest, jspb.Message);
+goog.inherits(proto.quasarlabs.quasarnode.epochs.QueryEpochsInfoRequest, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.quasarlabs.quasarnode.qoracle.osmosis.QueryIncentivizedPoolsRequest.displayName = 'proto.quasarlabs.quasarnode.qoracle.osmosis.QueryIncentivizedPoolsRequest';
+  proto.quasarlabs.quasarnode.epochs.QueryEpochsInfoRequest.displayName = 'proto.quasarlabs.quasarnode.epochs.QueryEpochsInfoRequest';
 }
 
 
@@ -54,8 +54,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.quasarlabs.quasarnode.qoracle.osmosis.QueryIncentivizedPoolsRequest.prototype.toObject = function(opt_includeInstance) {
-  return proto.quasarlabs.quasarnode.qoracle.osmosis.QueryIncentivizedPoolsRequest.toObject(opt_includeInstance, this);
+proto.quasarlabs.quasarnode.epochs.QueryEpochsInfoRequest.prototype.toObject = function(opt_includeInstance) {
+  return proto.quasarlabs.quasarnode.epochs.QueryEpochsInfoRequest.toObject(opt_includeInstance, this);
 };
 
 
@@ -64,11 +64,11 @@ proto.quasarlabs.quasarnode.qoracle.osmosis.QueryIncentivizedPoolsRequest.protot
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.quasarlabs.quasarnode.qoracle.osmosis.QueryIncentivizedPoolsRequest} msg The msg instance to transform.
+ * @param {!proto.quasarlabs.quasarnode.epochs.QueryEpochsInfoRequest} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.quasarlabs.quasarnode.qoracle.osmosis.QueryIncentivizedPoolsRequest.toObject = function(includeInstance, msg) {
+proto.quasarlabs.quasarnode.epochs.QueryEpochsInfoRequest.toObject = function(includeInstance, msg) {
   var f, obj = {
 
   };
@@ -84,23 +84,23 @@ proto.quasarlabs.quasarnode.qoracle.osmosis.QueryIncentivizedPoolsRequest.toObje
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.quasarlabs.quasarnode.qoracle.osmosis.QueryIncentivizedPoolsRequest}
+ * @return {!proto.quasarlabs.quasarnode.epochs.QueryEpochsInfoRequest}
  */
-proto.quasarlabs.quasarnode.qoracle.osmosis.QueryIncentivizedPoolsRequest.deserializeBinary = function(bytes) {
+proto.quasarlabs.quasarnode.epochs.QueryEpochsInfoRequest.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.quasarlabs.quasarnode.qoracle.osmosis.QueryIncentivizedPoolsRequest;
-  return proto.quasarlabs.quasarnode.qoracle.osmosis.QueryIncentivizedPoolsRequest.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.quasarlabs.quasarnode.epochs.QueryEpochsInfoRequest;
+  return proto.quasarlabs.quasarnode.epochs.QueryEpochsInfoRequest.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.quasarlabs.quasarnode.qoracle.osmosis.QueryIncentivizedPoolsRequest} msg The message object to deserialize into.
+ * @param {!proto.quasarlabs.quasarnode.epochs.QueryEpochsInfoRequest} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.quasarlabs.quasarnode.qoracle.osmosis.QueryIncentivizedPoolsRequest}
+ * @return {!proto.quasarlabs.quasarnode.epochs.QueryEpochsInfoRequest}
  */
-proto.quasarlabs.quasarnode.qoracle.osmosis.QueryIncentivizedPoolsRequest.deserializeBinaryFromReader = function(msg, reader) {
+proto.quasarlabs.quasarnode.epochs.QueryEpochsInfoRequest.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -120,9 +120,9 @@ proto.quasarlabs.quasarnode.qoracle.osmosis.QueryIncentivizedPoolsRequest.deseri
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.quasarlabs.quasarnode.qoracle.osmosis.QueryIncentivizedPoolsRequest.prototype.serializeBinary = function() {
+proto.quasarlabs.quasarnode.epochs.QueryEpochsInfoRequest.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.quasarlabs.quasarnode.qoracle.osmosis.QueryIncentivizedPoolsRequest.serializeBinaryToWriter(this, writer);
+  proto.quasarlabs.quasarnode.epochs.QueryEpochsInfoRequest.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -130,11 +130,11 @@ proto.quasarlabs.quasarnode.qoracle.osmosis.QueryIncentivizedPoolsRequest.protot
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.quasarlabs.quasarnode.qoracle.osmosis.QueryIncentivizedPoolsRequest} message
+ * @param {!proto.quasarlabs.quasarnode.epochs.QueryEpochsInfoRequest} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.quasarlabs.quasarnode.qoracle.osmosis.QueryIncentivizedPoolsRequest.serializeBinaryToWriter = function(message, writer) {
+proto.quasarlabs.quasarnode.epochs.QueryEpochsInfoRequest.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
 };
 

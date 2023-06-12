@@ -122,6 +122,9 @@ Using [buf](https://github.com/bufbuild)
  #### 🪐[Provenance](https://github.com/provenance-io/provenance/tree/main/proto)
 
 
+ #### 🪐[Quasar](https://github.com/quasar-finance/quasar-preview/tree/main/proto)
+
+
  #### 🪐[Quicksilver](https://github.com/ingenuity-build/quicksilver/tree/develop/proto)
 
 

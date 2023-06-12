@@ -1,4 +1,4 @@
-// source: quasar/qoracle/osmosis/query.proto
+// source: osmosis/pool-incentives/v1beta1/query.proto
 /**
  * @fileoverview
  * @enhanceable
@@ -11,7 +11,7 @@
 /* eslint-disable */
 // @ts-nocheck
 
-goog.provide('proto.quasarlabs.quasarnode.qoracle.osmosis.QueryIncentivizedPoolsResponse');
+goog.provide('proto.osmosis.poolincentives.v1beta1.QueryIncentivizedPoolsResponse');
 
 goog.require('jspb.BinaryReader');
 goog.require('jspb.BinaryWriter');
@@ -28,16 +28,16 @@ goog.require('proto.osmosis.poolincentives.v1beta1.IncentivizedPool');
  * @extends {jspb.Message}
  * @constructor
  */
-proto.quasarlabs.quasarnode.qoracle.osmosis.QueryIncentivizedPoolsResponse = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, proto.quasarlabs.quasarnode.qoracle.osmosis.QueryIncentivizedPoolsResponse.repeatedFields_, null);
+proto.osmosis.poolincentives.v1beta1.QueryIncentivizedPoolsResponse = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, proto.osmosis.poolincentives.v1beta1.QueryIncentivizedPoolsResponse.repeatedFields_, null);
 };
-goog.inherits(proto.quasarlabs.quasarnode.qoracle.osmosis.QueryIncentivizedPoolsResponse, jspb.Message);
+goog.inherits(proto.osmosis.poolincentives.v1beta1.QueryIncentivizedPoolsResponse, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.quasarlabs.quasarnode.qoracle.osmosis.QueryIncentivizedPoolsResponse.displayName = 'proto.quasarlabs.quasarnode.qoracle.osmosis.QueryIncentivizedPoolsResponse';
+  proto.osmosis.poolincentives.v1beta1.QueryIncentivizedPoolsResponse.displayName = 'proto.osmosis.poolincentives.v1beta1.QueryIncentivizedPoolsResponse';
 }
 
 /**
@@ -45,7 +45,7 @@ if (goog.DEBUG && !COMPILED) {
  * @private {!Array<number>}
  * @const
  */
-proto.quasarlabs.quasarnode.qoracle.osmosis.QueryIncentivizedPoolsResponse.repeatedFields_ = [1];
+proto.osmosis.poolincentives.v1beta1.QueryIncentivizedPoolsResponse.repeatedFields_ = [1];
 
 
 
@@ -62,8 +62,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.quasarlabs.quasarnode.qoracle.osmosis.QueryIncentivizedPoolsResponse.prototype.toObject = function(opt_includeInstance) {
-  return proto.quasarlabs.quasarnode.qoracle.osmosis.QueryIncentivizedPoolsResponse.toObject(opt_includeInstance, this);
+proto.osmosis.poolincentives.v1beta1.QueryIncentivizedPoolsResponse.prototype.toObject = function(opt_includeInstance) {
+  return proto.osmosis.poolincentives.v1beta1.QueryIncentivizedPoolsResponse.toObject(opt_includeInstance, this);
 };
 
 
@@ -72,11 +72,11 @@ proto.quasarlabs.quasarnode.qoracle.osmosis.QueryIncentivizedPoolsResponse.proto
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.quasarlabs.quasarnode.qoracle.osmosis.QueryIncentivizedPoolsResponse} msg The msg instance to transform.
+ * @param {!proto.osmosis.poolincentives.v1beta1.QueryIncentivizedPoolsResponse} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.quasarlabs.quasarnode.qoracle.osmosis.QueryIncentivizedPoolsResponse.toObject = function(includeInstance, msg) {
+proto.osmosis.poolincentives.v1beta1.QueryIncentivizedPoolsResponse.toObject = function(includeInstance, msg) {
   var f, obj = {
     incentivizedPoolsList: jspb.Message.toObjectList(msg.getIncentivizedPoolsList(),
     proto.osmosis.poolincentives.v1beta1.IncentivizedPool.toObject, includeInstance)
@@ -93,23 +93,23 @@ proto.quasarlabs.quasarnode.qoracle.osmosis.QueryIncentivizedPoolsResponse.toObj
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.quasarlabs.quasarnode.qoracle.osmosis.QueryIncentivizedPoolsResponse}
+ * @return {!proto.osmosis.poolincentives.v1beta1.QueryIncentivizedPoolsResponse}
  */
-proto.quasarlabs.quasarnode.qoracle.osmosis.QueryIncentivizedPoolsResponse.deserializeBinary = function(bytes) {
+proto.osmosis.poolincentives.v1beta1.QueryIncentivizedPoolsResponse.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.quasarlabs.quasarnode.qoracle.osmosis.QueryIncentivizedPoolsResponse;
-  return proto.quasarlabs.quasarnode.qoracle.osmosis.QueryIncentivizedPoolsResponse.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.osmosis.poolincentives.v1beta1.QueryIncentivizedPoolsResponse;
+  return proto.osmosis.poolincentives.v1beta1.QueryIncentivizedPoolsResponse.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.quasarlabs.quasarnode.qoracle.osmosis.QueryIncentivizedPoolsResponse} msg The message object to deserialize into.
+ * @param {!proto.osmosis.poolincentives.v1beta1.QueryIncentivizedPoolsResponse} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.quasarlabs.quasarnode.qoracle.osmosis.QueryIncentivizedPoolsResponse}
+ * @return {!proto.osmosis.poolincentives.v1beta1.QueryIncentivizedPoolsResponse}
  */
-proto.quasarlabs.quasarnode.qoracle.osmosis.QueryIncentivizedPoolsResponse.deserializeBinaryFromReader = function(msg, reader) {
+proto.osmosis.poolincentives.v1beta1.QueryIncentivizedPoolsResponse.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -134,9 +134,9 @@ proto.quasarlabs.quasarnode.qoracle.osmosis.QueryIncentivizedPoolsResponse.deser
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.quasarlabs.quasarnode.qoracle.osmosis.QueryIncentivizedPoolsResponse.prototype.serializeBinary = function() {
+proto.osmosis.poolincentives.v1beta1.QueryIncentivizedPoolsResponse.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.quasarlabs.quasarnode.qoracle.osmosis.QueryIncentivizedPoolsResponse.serializeBinaryToWriter(this, writer);
+  proto.osmosis.poolincentives.v1beta1.QueryIncentivizedPoolsResponse.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -144,11 +144,11 @@ proto.quasarlabs.quasarnode.qoracle.osmosis.QueryIncentivizedPoolsResponse.proto
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.quasarlabs.quasarnode.qoracle.osmosis.QueryIncentivizedPoolsResponse} message
+ * @param {!proto.osmosis.poolincentives.v1beta1.QueryIncentivizedPoolsResponse} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.quasarlabs.quasarnode.qoracle.osmosis.QueryIncentivizedPoolsResponse.serializeBinaryToWriter = function(message, writer) {
+proto.osmosis.poolincentives.v1beta1.QueryIncentivizedPoolsResponse.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getIncentivizedPoolsList();
   if (f.length > 0) {
@@ -162,10 +162,10 @@ proto.quasarlabs.quasarnode.qoracle.osmosis.QueryIncentivizedPoolsResponse.seria
 
 
 /**
- * repeated osmosis.poolincentives.v1beta1.IncentivizedPool incentivized_pools = 1;
+ * repeated IncentivizedPool incentivized_pools = 1;
  * @return {!Array<!proto.osmosis.poolincentives.v1beta1.IncentivizedPool>}
  */
-proto.quasarlabs.quasarnode.qoracle.osmosis.QueryIncentivizedPoolsResponse.prototype.getIncentivizedPoolsList = function() {
+proto.osmosis.poolincentives.v1beta1.QueryIncentivizedPoolsResponse.prototype.getIncentivizedPoolsList = function() {
   return /** @type{!Array<!proto.osmosis.poolincentives.v1beta1.IncentivizedPool>} */ (
     jspb.Message.getRepeatedWrapperField(this, proto.osmosis.poolincentives.v1beta1.IncentivizedPool, 1));
 };
@@ -173,9 +173,9 @@ proto.quasarlabs.quasarnode.qoracle.osmosis.QueryIncentivizedPoolsResponse.proto
 
 /**
  * @param {!Array<!proto.osmosis.poolincentives.v1beta1.IncentivizedPool>} value
- * @return {!proto.quasarlabs.quasarnode.qoracle.osmosis.QueryIncentivizedPoolsResponse} returns this
+ * @return {!proto.osmosis.poolincentives.v1beta1.QueryIncentivizedPoolsResponse} returns this
 */
-proto.quasarlabs.quasarnode.qoracle.osmosis.QueryIncentivizedPoolsResponse.prototype.setIncentivizedPoolsList = function(value) {
+proto.osmosis.poolincentives.v1beta1.QueryIncentivizedPoolsResponse.prototype.setIncentivizedPoolsList = function(value) {
   return jspb.Message.setRepeatedWrapperField(this, 1, value);
 };
 
@@ -185,16 +185,16 @@ proto.quasarlabs.quasarnode.qoracle.osmosis.QueryIncentivizedPoolsResponse.proto
  * @param {number=} opt_index
  * @return {!proto.osmosis.poolincentives.v1beta1.IncentivizedPool}
  */
-proto.quasarlabs.quasarnode.qoracle.osmosis.QueryIncentivizedPoolsResponse.prototype.addIncentivizedPools = function(opt_value, opt_index) {
+proto.osmosis.poolincentives.v1beta1.QueryIncentivizedPoolsResponse.prototype.addIncentivizedPools = function(opt_value, opt_index) {
   return jspb.Message.addToRepeatedWrapperField(this, 1, opt_value, proto.osmosis.poolincentives.v1beta1.IncentivizedPool, opt_index);
 };
 
 
 /**
  * Clears the list making it empty but non-null.
- * @return {!proto.quasarlabs.quasarnode.qoracle.osmosis.QueryIncentivizedPoolsResponse} returns this
+ * @return {!proto.osmosis.poolincentives.v1beta1.QueryIncentivizedPoolsResponse} returns this
  */
-proto.quasarlabs.quasarnode.qoracle.osmosis.QueryIncentivizedPoolsResponse.prototype.clearIncentivizedPoolsList = function() {
+proto.osmosis.poolincentives.v1beta1.QueryIncentivizedPoolsResponse.prototype.clearIncentivizedPoolsList = function() {
   return this.setIncentivizedPoolsList([]);
 };
 
