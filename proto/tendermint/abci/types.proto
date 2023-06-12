@@ -197,6 +197,7 @@ message Response {
     ResponseInitChain           init_chain            = 6;
     ResponseQuery               query                 = 7;
     ResponseCheckTx             check_tx              = 9;
+    ResponseDeliverTx           deliver_tx            = 10;
     ResponseCommit              commit                = 12;
     ResponseListSnapshots       list_snapshots        = 13;
     ResponseOfferSnapshot       offer_snapshot        = 14;
@@ -208,7 +209,7 @@ message Response {
     ResponseVerifyVoteExtension verify_vote_extension = 20;
     ResponseFinalizeBlock       finalize_block        = 21;
   }
-  reserved 5, 8, 10, 11;  // SetOption, BeginBlock, DeliverTx, EndBlock
+  reserved 5, 8, 11;  // SetOption, BeginBlock, DeliverTx, EndBlock
 }
 
 // nondeterministic
@@ -266,6 +267,18 @@ message ResponseCheckTx {
   // removed).
   reserved 9 to 11;
   reserved "sender", "priority", "mempool_error";
+}
+
+message ResponseDeliverTx {
+  uint32         code       = 1;
+  bytes          data       = 2;
+  string         log        = 3;  // nondeterministic
+  string         info       = 4;  // nondeterministic
+  int64          gas_wanted = 5 [json_name = "gas_wanted"];
+  int64          gas_used   = 6 [json_name = "gas_used"];
+  repeated Event events     = 7
+      [(gogoproto.nullable) = false, (gogoproto.jsontag) = "events,omitempty"]; // nondeterministic
+  string codespace = 8;
 }
 
 message ResponseCommit {

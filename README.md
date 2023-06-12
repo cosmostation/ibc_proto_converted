@@ -77,6 +77,27 @@ Java, Swift, Go, Javascript, Python
  #### 🪐[Juno](https://github.com/CosmosContracts/juno/tree/main/proto)
 
 
+ #### 🪐[Kyve](https://github.com/KYVENetwork/chain/tree/main/proto)
+
+
+ #### 🪐[Likecoin](https://github.com/likecoin/likecoin-chain/tree/master/proto)
+
+
+ #### 🪐[Lum](https://github.com/lum-network/chain/tree/master/proto)
+
+
+ #### 🪐[Mars](https://github.com/mars-protocol/hub/tree/main/proto)
+
+
+ #### 🪐[Medibloc](https://github.com/medibloc/panacea-core/tree/main/proto)
+
+
+ #### 🪐[Neutron](https://github.com/neutron-org/neutron/tree/main/proto)
+
+
+
+
+
 
  #### 🪐[Kava](https://github.com/Kava-Labs/kava/tree/master/proto)
 
